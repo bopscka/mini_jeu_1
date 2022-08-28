@@ -29,3 +29,12 @@ button{
 .grand{
     padding: 0 15px;
 }
+
+.container{
+    text-align: left;
+    font-size: 13px;
+    width: 300px;
+    margin: 0 auto;
+    font-style: italic;
+
+}
