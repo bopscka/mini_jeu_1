@@ -11,6 +11,15 @@ let numeroTentative = 1
 const nombreATrouver = genererNombreAleatoire()
 console.log(nombreATrouver)
 
+const ajouterAuContainer = texte => {
+    const divText = document.createElement('div')
+    divText.textContent = texte
+
+    const container = document.getElementById('container')
+    container.insertBefore(divText,container.firstChild)
+
+}
+
 const proposerNombre = () => {
     // recuperer le champs avec le nombre 
     const input = document.getElementById('input-nombre')
@@ -21,13 +30,7 @@ const proposerNombre = () => {
     //transformer la valeur texte en nombre
     const nombrePropose = parseInt(valeur,10)
 
-    const divProposition = document.createElement('div')
-    divProposition.textContent = 'Tentative ' + numeroTentative
-
-    const container = document.getElementById('container')
-    // container.appendChild(divProposition)
-    container.insertBefore(divProposition,container.firstChild)
-
+    ajouterAuContainer('Tentative ' + numeroTentative)
     
     console.log(nombrePropose, typeof nombrePropose)
 
@@ -35,27 +38,18 @@ const proposerNombre = () => {
     if (nombrePropose === nombreATrouver){
         console.log('BRAVO!!!!')
 
-        const divEgal = document.createElement('div')
-        divEgal.textContent = 'Bravo!!!! (*-*)'
-
-        container.insertBefore(divEgal, container.firstChild)
+        ajouterAuContainer('Bravo!!!! (*-*)')
 
     }else{
         if(nombreATrouver > nombrePropose){
             console.log('le nombre est plus grand ')
 
-            const divPlusG = document.createElement('div')
-            divPlusG.textContent = 'plus grand :-)'
-
-        container.insertBefore(divPlusG, container.firstChild)
+            ajouterAuContainer('plus grand :-)')
 
         }else{
             console.log('le nombre est plus petit')
 
-            const divPlusP = document.createElement('div')
-            divPlusP.textContent = 'il est plus petit :-/ ' + numeroTentative
-
-        container.insertBefore(divPlusP, container.firstChild)
+            ajouterAuContainer('il est plus petit :-/ ')
 
         }
 
