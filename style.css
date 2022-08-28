@@ -9,6 +9,11 @@ input{
     height: 2em;
 }
 
+input:invalid{
+    background-color: rgb(245, 191, 191);
+    border-color: 1px solid red;
+}
+
 button{
     display: block;
     margin: 15px auto;
