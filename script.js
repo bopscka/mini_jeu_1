@@ -32,11 +32,29 @@ const proposerNombre = () => {
     // comparer le nombre avec le nombre a trouver
     if (nombrePropose === nombreATrouver){
         console.log('BRAVO!!!!')
+
+        const divEgal = document.createElement('div')
+        divEgal.textContent = 'Bravo!!!! (*-*)'
+
+        container.appendChild(divEgal)
+
     }else{
         if(nombreATrouver > nombrePropose){
             console.log('le nombre est plus grand ')
+
+            const divPlusG = document.createElement('div')
+            divPlusG.textContent = 'plus grand :-)'
+
+        container.appendChild(divPlusG)
+
         }else{
             console.log('le nombre est plus petit')
+
+            const divPlusP = document.createElement('div')
+            divPlusP.textContent = 'il est plus petit :-/ ' + numeroTentative
+
+        container.appendChild(divPlusP)
+
         }
 
         numeroTentative += 1
