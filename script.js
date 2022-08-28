@@ -25,7 +25,9 @@ const proposerNombre = () => {
     divProposition.textContent = 'Tentative ' + numeroTentative
 
     const container = document.getElementById('container')
-    container.appendChild(divProposition)
+    // container.appendChild(divProposition)
+    container.insertBefore(divProposition,container.firstChild)
+
     
     console.log(nombrePropose, typeof nombrePropose)
 
@@ -36,7 +38,7 @@ const proposerNombre = () => {
         const divEgal = document.createElement('div')
         divEgal.textContent = 'Bravo!!!! (*-*)'
 
-        container.appendChild(divEgal)
+        container.insertBefore(divEgal, container.firstChild)
 
     }else{
         if(nombreATrouver > nombrePropose){
@@ -45,7 +47,7 @@ const proposerNombre = () => {
             const divPlusG = document.createElement('div')
             divPlusG.textContent = 'plus grand :-)'
 
-        container.appendChild(divPlusG)
+        container.insertBefore(divPlusG, container.firstChild)
 
         }else{
             console.log('le nombre est plus petit')
@@ -53,7 +55,7 @@ const proposerNombre = () => {
             const divPlusP = document.createElement('div')
             divPlusP.textContent = 'il est plus petit :-/ ' + numeroTentative
 
-        container.appendChild(divPlusP)
+        container.insertBefore(divPlusP, container.firstChild)
 
         }
 
