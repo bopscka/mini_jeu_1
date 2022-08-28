@@ -7,6 +7,7 @@ const genererNombreAleatoire = () =>{
     return nombre
 }
 
+let numeroTentative = 1
 const nombreATrouver = genererNombreAleatoire()
 console.log(nombreATrouver)
 
@@ -19,6 +20,12 @@ const proposerNombre = () => {
 
     //transformer la valeur texte en nombre
     const nombrePropose = parseInt(valeur,10)
+
+    const divProposition = document.createElement('div')
+    divProposition.textContent = 'Tentative ' + numeroTentative
+
+    const container = document.getElementById('container')
+    container.appendChild(divProposition)
     
     console.log(nombrePropose, typeof nombrePropose)
 
@@ -31,6 +38,8 @@ const proposerNombre = () => {
         }else{
             console.log('le nombre est plus petit')
         }
+
+        numeroTentative += 1
     }
 
 }
