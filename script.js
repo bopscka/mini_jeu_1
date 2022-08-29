@@ -8,6 +8,9 @@ const genererNombreAleatoire = () =>{
 }
 
 let numeroTentative = 1
+let nombreBas = 1
+let nombreHaut = 100
+
 const nombreATrouver = genererNombreAleatoire()
 console.log(nombreATrouver)
 
@@ -40,16 +43,32 @@ const proposerNombre = () => {
 
         ajouterAuContainer('Bravo!!!! (*-*)')
 
+        const elementCentre = document.getElementById('centre')
+        elementCentre.textContent = nombrePropose
+
     }else{
         if(nombreATrouver > nombrePropose){
             console.log('le nombre est plus grand ')
 
             ajouterAuContainer('plus grand :-)')
 
+            //si le nombre est supérieur au plus bas:
+            if(nombrePropose > nombreBas){
+                const elementBas = document.getElementById('bas')
+                elementBas.textContent = nombrePropose
+                nombreBas = nombrePropose
+            }
+
         }else{
             console.log('le nombre est plus petit')
-
             ajouterAuContainer('il est plus petit :-/ ')
+
+            //si le nombre est inférieur au plus Haut:
+            if(nombrePropose < nombreHaut){
+                const elementHaut = document.getElementById('haut')
+                elementHaut.textContent = nombrePropose
+                nombreHaut = nombrePropose
+            }
 
         }
 
