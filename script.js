@@ -46,34 +46,34 @@ const proposerNombre = () => {
 
     // comparer le nombre avec le nombre a trouver
     if (nombrePropose === nombreATrouver){
-        console.log('BRAVO!!!!')
+        console.log('BRAVO!!!! ')
 
-        ajouterAuContainer('Bravo!!!! (*-*)')
+        ajouterAuContainer('Bravo!!!! (*-*)👏️😉️')
 
         const elementCentre = document.getElementById('centre')
-        elementCentre.textContent = nombrePropose
+        elementCentre.textContent = nombrePropose + '💡️'
 
     }else{
         if(nombreATrouver > nombrePropose){
             console.log('le nombre est plus grand ')
 
-            ajouterAuContainer('plus grand :-)')
+            ajouterAuContainer('il est plus grand 😊️:-)')
 
             //si le nombre est supérieur au plus bas:
             if(nombrePropose > nombreBas){
                 const elementBas = document.getElementById('bas')
-                elementBas.textContent = nombrePropose
+                elementBas.textContent = nombrePropose + '📈️'
                 nombreBas = nombrePropose
             }
 
         }else{
             console.log('le nombre est plus petit')
-            ajouterAuContainer('il est plus petit :-/ ')
+            ajouterAuContainer('il est plus petit 😅️ ')
 
             //si le nombre est inférieur au plus Haut:
             if(nombrePropose < nombreHaut){
                 const elementHaut = document.getElementById('haut')
-                elementHaut.textContent = nombrePropose
+                elementHaut.textContent = nombrePropose + '📉️'
                 nombreHaut = nombrePropose
             }
 
