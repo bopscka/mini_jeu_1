@@ -30,6 +30,13 @@ const proposerNombre = () => {
 
     console.log(valeur, typeof valeur)
 
+    //Vérifier que la valeur n'est pas vide
+
+    if (valeur === ''){
+        //si elle est vide ,ne rien faire
+        return
+    }
+
     //transformer la valeur texte en nombre
     const nombrePropose = parseInt(valeur,10)
 
