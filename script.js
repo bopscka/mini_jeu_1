@@ -30,15 +30,20 @@ const proposerNombre = () => {
 
     console.log(valeur, typeof valeur)
 
-    //Vérifier que la valeur n'est pas vide
-
-    if (valeur === ''){
-        //si elle est vide ,ne rien faire
-        return
-    }
-
     //transformer la valeur texte en nombre
     const nombrePropose = parseInt(valeur,10)
+
+        //Vérifier que la valeur n'est ni vide, ni supérieur à 100
+        if (valeur === '' || nombrePropose > 100 || nombrePropose === 0 ){
+            //si elle est vide ,ne rien faire
+            // alert('Veuillez entrer une saisie valide!')
+            Swal.fire(
+                'Oups 😥️!',
+                'tu dois entrer une saisie valide!',
+                'error'
+              )
+            return
+        }
 
     ajouterAuContainer('Tentative ' + numeroTentative)
     
