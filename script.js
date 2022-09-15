@@ -42,6 +42,8 @@ const proposerNombre = () => {
                 'tu dois entrer une saisie valide!',
                 'error'
               )
+            document.getElementById('input-nombre').value = ""
+
             return
         }
 
@@ -59,6 +61,14 @@ const proposerNombre = () => {
         elementCentre.textContent = nombrePropose + '💡️'
         // nombreATrouver = genererNombreAleatoire()
         // console.log(nombreATrouver)
+
+        Swal.fire(
+            'BRAVOOOO 😊️👏️👏️!',
+            'Juste...magnifique!!',
+            'success'
+          )
+        document.getElementById('input-nombre').value = ""
+
         const reload = () => { location.reload() }
 
         const bouton1 = document.createElement('button')
@@ -67,13 +77,6 @@ const proposerNombre = () => {
 
         const container = document.getElementById('container')
         container.insertBefore(bouton1,container.firstChild)    
-
-        // Swal.fire(
-        //     'BRAVOOOO 😊️👏️👏️!',
-        //     'Juste...magnifique!!',
-        //     'success'
-        //   )
-
 
     }else{
         if(nombreATrouver > nombrePropose){
