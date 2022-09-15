@@ -59,12 +59,20 @@ const proposerNombre = () => {
         elementCentre.textContent = nombrePropose + '💡️'
         // nombreATrouver = genererNombreAleatoire()
         // console.log(nombreATrouver)
-        Swal.fire(
-            'BRAVOOOO 😊️👏️👏️!',
-            'Juste...magnifique!!',
-            'success'
-          )
-        location.reload()
+        const reload = () => { location.reload() }
+
+        const bouton1 = document.createElement('button')
+        bouton1.textContent = 'Nouvelle😁️tentative'
+        bouton1.addEventListener('click',reload)
+
+        const container = document.getElementById('container')
+        container.insertBefore(bouton1,container.firstChild)    
+
+        // Swal.fire(
+        //     'BRAVOOOO 😊️👏️👏️!',
+        //     'Juste...magnifique!!',
+        //     'success'
+        //   )
 
 
     }else{
