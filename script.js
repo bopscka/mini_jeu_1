@@ -57,6 +57,15 @@ const proposerNombre = () => {
 
         const elementCentre = document.getElementById('centre')
         elementCentre.textContent = nombrePropose + '💡️'
+        // nombreATrouver = genererNombreAleatoire()
+        // console.log(nombreATrouver)
+        Swal.fire(
+            'BRAVOOOO 😊️👏️👏️!',
+            'Juste...magnifique!!',
+            'success'
+          )
+        location.reload()
+
 
     }else{
         if(nombreATrouver > nombrePropose){
